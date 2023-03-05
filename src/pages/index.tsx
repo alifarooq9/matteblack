@@ -1,13 +1,14 @@
 import { type NextPage } from "next";
-import HeadTag from "~/components/headTag";
+import Layout from "~/components/layout";
 
 const Home: NextPage = () => {
   return (
     <>
-      <HeadTag />
-      <main>
-        <h1>Hello World</h1>
-      </main>
+      <Layout>
+        <main>
+          <h1>Hello World</h1>
+        </main>
+      </Layout>
     </>
   );
 };
