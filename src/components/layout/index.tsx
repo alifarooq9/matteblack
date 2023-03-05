@@ -1,6 +1,8 @@
 import type { FC, ReactNode } from "react";
 import Header from "../header";
 import HeadTag from "../headTag";
+import classNames from "classnames";
+import { inter } from "~/ui/fonts";
 
 type LayoutProps = {
   children: ReactNode;
@@ -12,9 +14,10 @@ const Layout: FC<LayoutProps> = (props) => {
   return (
     <>
       <HeadTag />
-      <div className={""}>
+      <div className={classNames(inter.className, "overflow-x-hidden")}>
         <Header />
-        <div className="py-16">{props.children}</div>
+        <div className="min-h-screen py-16">{props.children}</div>
+        {/* <Footer /> */}
       </div>
     </>
   );
