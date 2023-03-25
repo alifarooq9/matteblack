@@ -212,7 +212,7 @@ const Header: FC = () => {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
   return (
-    <div className="fixed top-0 w-screen border-b border-gray-200 bg-white">
+    <div className="fixed top-0 z-30 w-screen border-b border-gray-200 bg-white">
       {/* Mobile menu */}
       <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
 
