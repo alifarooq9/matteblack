@@ -83,16 +83,15 @@ const MobileMenu: FC<Props> = ({ mobileMenu, setMobileMenu }) => {
                         {category.featured.map((item, itemIdx) => (
                           <div
                             key={itemIdx}
-                            className="group aspect-w-1 aspect-h-1 relative overflow-hidden rounded-md bg-gray-100"
+                            className="group aspect-w-1 aspect-h-1 relative overflow-hidden rounded-3xl bg-gray-100"
                           >
-                            <div className="relative">
-                              <Image
-                                src={item.imageSrc}
-                                alt={item.imageAlt}
-                                fill
-                                className="object-cover object-center group-hover:opacity-75"
-                              />
-                            </div>
+                            <Image
+                              src={item.imageSrc}
+                              alt={item.imageAlt}
+                              fill
+                              className="object-cover object-center group-hover:opacity-75"
+                            />
+
                             <div className="flex flex-col justify-end">
                               <div className="bg-white bg-opacity-60 p-4 text-base sm:text-sm">
                                 <a
@@ -162,22 +161,6 @@ const MobileMenu: FC<Props> = ({ mobileMenu, setMobileMenu }) => {
                     </a>
                   </div>
                 ))}
-              </div>
-
-              <div className="border-t border-gray-200 py-6 px-4">
-                <a href="#" className="-m-2 flex items-center p-2">
-                  <div className="relative block h-auto w-5 flex-shrink-0">
-                    <Image
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      fill
-                    />
-                  </div>
-                  <span className="ml-3 block text-base font-medium text-gray-900">
-                    CAD
-                  </span>
-                  <span className="sr-only">, change currency</span>
-                </a>
               </div>
             </Dialog.Panel>
           </Transition.Child>
