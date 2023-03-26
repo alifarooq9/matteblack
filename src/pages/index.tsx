@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                   <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-6xl">
                     Summer styles are finally here
                   </h1>
-                  <p className="mt-4 text-lg text-gray-500">
+                  <p className="mt-4 text-base text-gray-500 sm:text-lg">
                     This year, our new summer collection will shelter you from
                     the harsh elements of a world that doesn&apos;t care if you
                     live or die.

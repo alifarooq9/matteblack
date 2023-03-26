@@ -8,10 +8,12 @@ import {
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import MobileMenu from "./mobileMenu";
-import AuthState from "./authState";
-import Cart, { cartOpenState } from "./cart";
+import { cartOpenState } from "./cart";
 import { useSetAtom } from "jotai";
+import dynamic from "next/dynamic";
+const Cart = dynamic(() => import("./cart"));
+const AuthState = dynamic(() => import("./authState"));
+const MobileMenu = dynamic(() => import("./mobileMenu"));
 
 export const navigation = {
   categories: [
