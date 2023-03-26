@@ -19,7 +19,7 @@ const AuthState: FC = () => {
         leaveFrom="opacity-100 -translate-y-0"
         leaveTo="opacity-0 -translate-y-2"
       >
-        <Popover.Panel className="absolute right-0 z-10 flex w-screen max-w-xs flex-col space-y-3 rounded-3xl bg-white p-5 drop-shadow-xl">
+        <Popover.Panel className="absolute right-0 z-10 flex w-64 flex-col space-y-3 rounded-3xl bg-white p-5 drop-shadow-xl">
           <Link
             href="/auth/signin"
             className="w-full rounded-2xl bg-red-600 py-3 px-8 text-center text-sm font-medium text-white transition-all duration-300 ease-in-out hover:bg-red-700"

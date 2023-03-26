@@ -10,6 +10,8 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./mobileMenu";
 import AuthState from "./authState";
+import Cart, { cartOpenState } from "./cart";
+import { useSetAtom } from "jotai";
 
 export const navigation = {
   categories: [
@@ -211,8 +213,14 @@ const Header: FC = () => {
   // mobile menu
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
 
+  // cart open state
+  const setCartOpen = useSetAtom(cartOpenState);
+
   return (
     <div className="fixed top-0 z-30 w-screen border-b border-gray-200 bg-white">
+      {/* Cart header */}
+      <Cart />
+
       {/* Mobile menu */}
       <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
 
@@ -417,7 +425,12 @@ const Header: FC = () => {
                 </a>
 
                 {/* Cart */}
-                <div className="ml-4 flow-root lg:ml-6">
+                <button
+                  onClick={() => {
+                    setCartOpen(true);
+                  }}
+                  className="ml-4 flow-root lg:ml-6"
+                >
                   <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
@@ -428,7 +441,7 @@ const Header: FC = () => {
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
-                </div>
+                </button>
 
                 {/* Account */}
                 <AuthState />

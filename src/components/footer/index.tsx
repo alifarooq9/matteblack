@@ -15,17 +15,17 @@ const Footer: FC = () => {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div>
             <Link
               href="/"
               className="flex items-center divide-x divide-gray-200"
             >
-              <div className="relative mr-2 h-6 w-6">
+              <div className="relative mr-2 h-8 w-8">
                 <Image src="logo.svg" fill alt="" />
               </div>
-              <span className="pl-2 text-lg font-bold">Matteblack</span>
+              <span className="pl-2 text-xl font-bold">Matteblack</span>
             </Link>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
