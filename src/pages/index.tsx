@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CategoryScection from "~/components/landing/category";
+import Promotion from "~/components/landing/promotion";
 import Layout from "~/components/layout";
 
 const Home: NextPage = () => {
@@ -9,7 +10,7 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <main>
-          <section className="relative min-h-screen overflow-hidden bg-white py-10">
+          <section className="relative min-h-screen overflow-hidden bg-white pt-10">
             <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
               <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
                 <div className="sm:max-w-lg sm:pt-10">
@@ -109,6 +110,7 @@ const Home: NextPage = () => {
             </div>
           </section>
           <CategoryScection />
+          <Promotion />
         </main>
       </Layout>
     </>
