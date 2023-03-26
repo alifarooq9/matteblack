@@ -4,12 +4,12 @@ import {
   Bars3Icon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
-  UserIcon,
 } from "@heroicons/react/24/outline";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./mobileMenu";
+import AuthState from "./authState";
 
 export const navigation = {
   categories: [
@@ -401,7 +401,9 @@ const Header: FC = () => {
                 <div className="relative mr-2 h-6 w-6">
                   <Image src="logo.svg" fill alt="" />
                 </div>
-                <span className="pl-2 text-lg font-bold">Matteblack</span>
+                <span className="hidden pl-2 text-lg font-bold sm:block">
+                  Matteblack
+                </span>
               </Link>
 
               <div className="flex flex-1 items-center justify-end">
@@ -412,15 +414,6 @@ const Header: FC = () => {
                 >
                   <span className="sr-only">Search</span>
                   <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-                </a>
-
-                {/* Account */}
-                <a
-                  href="#"
-                  className="p-2 text-gray-400 hover:text-gray-500 lg:ml-4"
-                >
-                  <span className="sr-only">Account</span>
-                  <UserIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
 
                 {/* Cart */}
@@ -436,6 +429,9 @@ const Header: FC = () => {
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
                 </div>
+
+                {/* Account */}
+                <AuthState />
               </div>
             </div>
           </div>
